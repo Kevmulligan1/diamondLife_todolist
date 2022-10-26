@@ -1,0 +1,126 @@
+:root{
+ --red: #ff000f;
+ --white: #fffaff;
+ --lightgray: #d3d3d3;
+ --midgray: #c0c0c0;
+ --darkgray: #808080;
+ --black: #000;
+
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+ }
+ body {
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+ }
+ header {
+    background-color: #ff000f;
+    padding: 2rem ;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+ }
+ header h1 {
+    color: #fffaff;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: center;
+ }
+ #task-input {
+   display: flex;
+   flex-direction: row;
+ }
+ button,input {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+ }
+ #new-task-input{
+
+    flex: 1 1 0%;
+    background-color: #fffaff;
+    padding: 1rem;
+    color: #000;
+    font-size: 1.25rem;
+ }
+ #new-task-input::placeholder{
+    color: #808080;
+ }
+
+ #new-task-enter {
+    background-color: #c0c0c0;
+    color: #808080;
+    cursor: pointer;
+    transition: 0.4s;
+ }
+#new-task-enter:hover{
+    opacity: 0.85;
+}
+ #new-task-submit:active{
+    opacity: 0.7;
+ }
+
+ main{
+    flex: 1 1 0%;
+    max-width: 835px;
+    width: 100%;
+    margin: 0 auto;
+ }
+ 
+
+ .tasks-list {
+    padding: 1rem;
+   
+ }
+ #tasks .task{
+    display: flex;
+    justify-content: space-between;
+    padding: .8rem;
+    cursor: pointer;
+ }
+
+ #tasks .task:nth-child(even){
+    background-color: #d3d3d3;
+ }
+ #tasks .task:nth-child(odd){
+    background-color: #f5f5f5;
+ }
+ #tasks .task:hover{
+    background-color: #808080;
+}
+ #tasks .task:active{
+   background-color: #808080;
+ }
+ #tasks .task.content{
+    cursor: pointer;
+ }
+#tasks .task.content:hover{
+    text-decoration: line-through;
+}
+
+ #tasks .task .content .text{
+    color:#000;
+    font-size: 1.15rem;
+
+ }
+ #tasks .task .features {
+    display: flex; 
+ }
+ .task .features button{
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: 0.4;
+ }
+ .task .features button:hover{
+    opacity: 0.85;
+}
+.task .features button:active{
+    opacity: 0.7;
+ }
